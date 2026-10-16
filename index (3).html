@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aisyah Rahman – Visual Designer, Kuala Lumpur</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:light;
+  --bg:#F3F1EA; --ink:#1B2140; --muted:#59607C; --indigo:#26306B; --gold:#E2A21B; --red:#C8283C; --teal:#1F7A72; --card:#FFFFFF; --line:#D9D6CA; --on-indigo:#F3F1EA;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#12162E;--ink:#F1EEE4;--muted:#A9AFCB;--indigo:#0B0E21;--card:#1B2145;--line:#2C3363;--on-indigo:#F1EEE4;}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#12162E;--ink:#F1EEE4;--muted:#A9AFCB;--indigo:#0B0E21;--card:#1B2145;--line:#2C3363;--on-indigo:#F1EEE4;}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "DM Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Young Serif",Georgia,serif;font-weight:400;line-height:1.08;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+header{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+header b{font-family:"Young Serif",Georgia,serif;font-weight:400;font-size:1.15rem}
+nav{display:flex;gap:22px;align-items:center;font-size:.95rem}
+nav a{text-decoration:none}nav a:hover{text-decoration:underline}
+.tog{border:1.5px solid var(--ink);background:none;color:var(--ink);border-radius:99px;padding:4px 12px;font:inherit;font-size:.85rem;cursor:pointer}
+.hero{padding:56px 0 64px}
+.hero h1{font-size:clamp(2.8rem,9vw,6.6rem);letter-spacing:-.02em;max-width:11ch}
+.hero p{max-width:46ch;font-size:1.2rem;color:var(--muted);margin:26px 0 30px}
+.btn{display:inline-block;background:var(--red);color:#fff;padding:14px 26px;border-radius:99px;text-decoration:none;font-weight:700}
+.btn.alt{background:none;color:var(--ink);border:1.5px solid var(--ink);margin-left:10px}
+/* songket-inspired woven band: the one memorable element */
+.songket{height:64px;background-color:var(--indigo);
+ background-image:
+  linear-gradient(135deg,transparent 42%,var(--gold) 42% 58%,transparent 58%),
+  linear-gradient(45deg,transparent 42%,var(--gold) 42% 58%,transparent 58%),
+  radial-gradient(circle,var(--red) 0 5px,transparent 6px);
+ background-size:32px 32px,32px 32px,32px 32px;background-position:0 0,0 0,16px 16px;border-block:6px solid var(--gold)}
+section{padding:72px 0}
+h2{font-size:clamp(2rem,5vw,3rem);margin-bottom:34px}
+.work{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
+.proj{border-radius:18px;padding:26px;min-height:250px;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;text-decoration:none;position:relative;overflow:hidden}
+.proj:hover h3{text-decoration:underline}
+.proj small{opacity:.85;font-size:.9rem}
+.proj h3{font-size:1.6rem;margin:4px 0}
+.p1{grid-column:span 4;background:var(--indigo);min-height:320px}
+.p2{grid-column:span 2;background:var(--red)}
+.p3{grid-column:span 2;background:var(--teal)}
+.p4{grid-column:span 4;background:#8A5A12}
+.proj::before{content:"";position:absolute;inset:0 0 auto auto;width:120px;height:120px;border-radius:0 18px 0 100%;background:rgba(255,255,255,.12)}
+.p1::after{content:"Kopi Kaki";position:absolute;top:22px;left:26px;font:italic 400 2.6rem/1 "Young Serif",serif;opacity:.25}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.about p{margin:0 0 16px;max-width:52ch}
+.skills{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:10px}
+.skills li{background:var(--card);border:1px solid var(--line);border-radius:99px;padding:6px 16px;font-size:.95rem}
+.cv{border-top:1px solid var(--line);margin-top:26px}
+.cv div{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.cv span:last-child{color:var(--muted);white-space:nowrap}
+.contact{background:var(--indigo);color:var(--on-indigo);border-radius:28px;padding:56px 40px;text-align:left}
+.contact h2{margin-bottom:14px}
+.contact p{max-width:48ch;opacity:.85;margin:0 0 26px}
+.contact .btn{background:var(--gold);color:#1B2140}
+.contact .btn.alt{background:none;color:var(--on-indigo);border-color:var(--on-indigo)}
+footer{padding:36px 0 44px;color:var(--muted);font-size:.9rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+@media(max-width:760px){
+ .work{grid-template-columns:1fr}.p1,.p2,.p3,.p4{grid-column:auto;min-height:220px}
+ .about{grid-template-columns:1fr;gap:32px}
+ nav a.hide{display:none}.contact{padding:38px 24px}.btn.alt{margin:12px 0 0}
+}
+@media(prefers-reduced-motion:no-preference){.hero h1{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}@keyframes rise{from{opacity:0;transform:translateY(22px)}}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <b>Aisyah Rahman</b>
+  <nav>
+    <a class="hide" href="#work" data-en="Work" data-bm="Karya">Work</a>
+    <a class="hide" href="#about" data-en="About" data-bm="Tentang">About</a>
+    <a href="#contact" data-en="Contact" data-bm="Hubungi">Contact</a>
+    <button class="tog" id="lang" aria-label="Switch language">BM</button>
+  </nav>
+</header>
+<main>
+<div class="hero">
+  <h1 data-en="Brands that feel like home." data-bm="Jenama yang terasa seperti rumah.">Brands that feel like home.</h1>
+  <p data-en="I’m a visual designer in Kuala Lumpur. I design logos, packaging and websites for local cafés, makers and growing businesses." data-bm="Saya pereka visual di Kuala Lumpur. Saya mereka logo, pembungkusan dan laman web untuk kafe, pengusaha dan perniagaan tempatan.">I’m a visual designer in Kuala Lumpur. I design logos, packaging and websites for local cafés, makers and growing businesses.</p>
+  <a class="btn" href="#work" data-en="See my work" data-bm="Lihat karya saya">See my work</a>
+  <a class="btn alt" href="#contact" data-en="Start a project" data-bm="Mulakan projek">Start a project</a>
+</div>
+</div>
+<div class="songket" role="presentation"></div>
+
+<div class="wrap">
+<section id="work">
+  <h2 data-en="Selected work" data-bm="Karya pilihan">Selected work</h2>
+  <div class="work">
+    <a class="proj p1" href="#contact"><small data-en="Branding · Café, Bangsar" data-bm="Penjenamaan · Kafe, Bangsar">Branding · Café, Bangsar</small><h3>Kopi Kaki</h3><small data-en="Full identity and menu for a neighbourhood kopitiam reborn." data-bm="Identiti penuh dan menu untuk kopitiam kejiranan yang dihidupkan semula.">Full identity and menu for a neighbourhood kopitiam reborn.</small></a>
+    <a class="proj p2" href="#contact"><small data-en="Packaging" data-bm="Pembungkusan">Packaging</small><h3>Sambal Mak Ngah</h3><small data-en="Label range for a home-run sambal brand." data-bm="Rekaan label untuk jenama sambal rumahan.">Label range for a home-run sambal brand.</small></a>
+    <a class="proj p3" href="#contact"><small data-en="Website" data-bm="Laman web">Website</small><h3>Batik Rimba</h3><small data-en="Online shop for hand-drawn batik from Terengganu." data-bm="Kedai dalam talian untuk batik lukis tangan dari Terengganu.">Online shop for hand-drawn batik from Terengganu.</small></a>
+    <a class="proj p4" href="#contact"><small data-en="Event design · Penang" data-bm="Reka bentuk acara · Pulau Pinang">Event design · Penang</small><h3>Pesta Makan Georgetown</h3><small data-en="Posters, wayfinding and social media for a weekend food festival." data-bm="Poster, papan tunjuk arah dan media sosial untuk pesta makanan hujung minggu.">Posters, wayfinding and social media for a weekend food festival.</small></a>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div>
+    <h2 data-en="About me" data-bm="Tentang saya">About me</h2>
+    <p data-en="I grew up in Kuantan and studied graphic design at UiTM Shah Alam. Since then I’ve spent eight years designing for Malaysian businesses, first at an agency in Mont Kiara and now on my own." data-bm="Saya membesar di Kuantan dan belajar reka bentuk grafik di UiTM Shah Alam. Sejak itu, lapan tahun saya mereka untuk perniagaan Malaysia, bermula di sebuah agensi di Mont Kiara dan kini bekerja sendiri.">I grew up in Kuantan and studied graphic design at UiTM Shah Alam. Since then I’ve spent eight years designing for Malaysian businesses, first at an agency in Mont Kiara and now on my own.</p>
+    <p data-en="My work borrows from the places I know: kopitiam tiles, batik lines, hand-painted signs. I design in English, Bahasa Malaysia and Mandarin." data-bm="Karya saya diilhamkan daripada tempat yang saya kenali: jubin kopitiam, garisan batik, papan tanda lukis tangan. Saya mereka dalam Bahasa Inggeris, Bahasa Malaysia dan Mandarin.">My work borrows from the places I know: kopitiam tiles, batik lines, hand-painted signs. I design in English, Bahasa Malaysia and Mandarin.</p>
+    <ul class="skills"><li>Logo &amp; identity</li><li>Packaging</li><li>Web design</li><li>Illustration</li><li>Figma</li><li>Illustrator</li></ul>
+  </div>
+  <div class="cv" aria-label="Experience">
+    <div><span>Freelance designer</span><span>2022 – now</span></div>
+    <div><span>Senior designer, Tanda Studio</span><span>2019 – 2022</span></div>
+    <div><span>Designer, Lorong Creative</span><span>2017 – 2019</span></div>
+    <div><span>Dip. Graphic Design, UiTM</span><span>2014 – 2017</span></div>
+  </div>
+</section>
+
+<section id="contact" style="padding-top:20px">
+  <div class="contact">
+    <h2 data-en="Got a project in mind?" data-bm="Ada projek dalam fikiran?">Got a project in mind?</h2>
+    <p data-en="Tell me about your business and what you need. I reply within one working day." data-bm="Ceritakan tentang perniagaan anda dan keperluan anda. Saya membalas dalam satu hari bekerja.">Tell me about your business and what you need. I reply within one working day.</p>
+    <a class="btn" href="https://wa.me/60123456789" data-en="Chat on WhatsApp" data-bm="Hubungi di WhatsApp">Chat on WhatsApp</a>
+    <a class="btn alt" href="mailto:hello@aisyahrahman.my">hello@aisyahrahman.my</a>
+  </div>
+</section>
+<footer><span>© 2026 Aisyah Rahman</span><span>Kuala Lumpur, Malaysia</span></footer>
+</div>
+</main>
+<script>
+(function(){
+  var btn=document.getElementById('lang'),bm=false;
+  btn.addEventListener('click',function(){
+    bm=!bm;
+    document.documentElement.lang=bm?'ms':'en';
+    document.querySelectorAll('[data-en]').forEach(function(el){el.textContent=el.getAttribute(bm?'data-bm':'data-en')});
+    btn.textContent=bm?'EN':'BM';
+  });
+})();
+</script>
+</body>
+</html>
